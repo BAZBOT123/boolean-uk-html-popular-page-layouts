@@ -1,0 +1,57 @@
+* {
+    margin: 0px;
+}
+
+.layout {
+    display: grid;
+    height: 100vh;
+    grid-template:
+    "top        top     top     top"        60px
+    "left       mid     right       nav"        1fr/
+    200px         1fr       380px       70px;
+}
+
+    .top {
+        grid-area: top;
+        background-color: orange;
+    }
+    .layout .search-box {
+        border: 2px solid black;
+        color: blue;
+    }
+    
+    
+    .left {
+        grid-area: left;
+        background-color: blue;
+    }
+
+    .mid {
+        grid-area: mid;
+        background-color: pink;
+    }
+
+    .right {
+        grid-area: right;
+        background-color: red;
+    }
+
+    .nav {
+        grid-area: nav;
+        background-color: green;
+    }
+
+    @media screen and (max-width: 800px) {
+        .layout {
+        grid-template:
+        "top        top"        50px
+    "left       mid"        1fr/
+    200px         1fr;
+    }
+    
+    .right,
+    .nav {
+        display: none;
+    }
+}
+

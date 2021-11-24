@@ -1,0 +1,83 @@
+* {
+    margin: 0px;
+}
+
+.layout {
+    display: grid;
+    height: 100vh;
+    grid-template:
+    "header     header      header"     50px
+    "left-one       mid-one     right-one"      300px
+    "left-one       mid-two     right-one"      50px
+    "left-two       mid-two     right-two"      300px
+    "left-three     mid-two     right-three"        400px/
+    1fr       1fr       1fr;
+}
+
+.header {
+    grid-area: header;
+    background-color: orange;
+}
+
+.left-one {
+    grid-area: left-one;
+    background-color: blue;
+}
+
+.left-two {
+    grid-area: left-two;
+    background-color: green;
+}
+
+.left-three {
+    grid-area: left-three;
+    background-color: grey;
+}
+
+.mid-one {
+    grid-area: mid-one;
+    background-color: pink;
+}
+
+.mid-two {
+    grid-area: mid-two;
+    background-color: red;
+}
+
+.right-one {
+    grid-area: right-one;
+    background-color: purple;
+}
+
+.right-two {
+    grid-area: right-two;
+    background-color: yellowgreen;
+}
+
+.right-three {
+    grid-area: right-three;
+    background-color: violet;
+}
+
+@media screen and (max-width: 800px) {
+    .layout {
+    grid-template:
+    "header     header"     50px
+    "left-one       mid-one"      300px
+    "left-one       mid-two"      50px
+    "left-two       mid-two"      300px
+    "left-three     mid-two"        400px/
+    1fr       1fr;
+    }
+    .right-one,
+    .right-two,
+    .right-three{
+        display: none;
+    }
+}
+
+@media (orientation: landscape) {
+    .left-one {
+    background: aquamarine;
+}
+}
